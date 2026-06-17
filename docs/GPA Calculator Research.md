@@ -1,6 +1,6 @@
 Grading Systems
 
-| Mark Range | Letter Grade (LG) | Numerical Equivalence (NE) |
+| Mark Range (MR) | Letter Grade (LG) | Numerical Equivalence (NE) |
 | ---------- | ----------------- | -------------------------- |
 | 85+        | A+                | 5.0                        |
 | 80-84      | A                 | 4.5                        |
