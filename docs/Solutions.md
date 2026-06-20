@@ -24,3 +24,15 @@ Output: B
 
 else if score >=  65
 Output: C+
+
+elseif score >= 60
+Output: C
+
+elseif score >= 55
+Output: D+
+
+elseif score >= 50
+Output: D
+
+else score < 50
+Output: F
