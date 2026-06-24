@@ -24,3 +24,24 @@ Grading Systems
 | Total Credit | Hours             | 18           |
 
 Grande Point
+
+#credit hour#
+ComSkills = 2
+NumSkills = 2
+OPTools = 2
+
+Score grade-letter grade-point
+85	A+		5.0
+75	B+		4.0
+91	A+		5.0
+
+total grade point = 5+4+5 = 14.0
+total credit hours = 2+2+2 = 6
+
+
+
+total grade point
+__________________
+total credit hours
+
+14/6 = 2.33
