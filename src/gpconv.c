@@ -1,9 +1,7 @@
 #include "gpa.h"
 
-char *gpconv(int a)
+char *gpconv(int score)
 {
-    int score;
-
     if (score >= 85)
     {
         return "A+";
