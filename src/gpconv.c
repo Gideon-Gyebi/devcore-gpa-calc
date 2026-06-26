@@ -10,8 +10,32 @@ char *gpconv(int score)
     {
         return "A";
     }
-    else (score >= 75);
-    
+    else if (score >= 75);
+    {
     return "B+";
-    
+    }
+else if (score >= 70);
+{
+return "B";
+}
+else if (score >= 65);
+{
+return "C+";
+}
+else if ( score >= 60);
+{
+return "C";
+}
+else if (score >= 55);
+{
+return "D+";
+}
+else if (score >= 50);
+{
+return "D";
+}
+else (score < 50);
+{
+return "F";
+}
 }
