@@ -1,1 +1,2 @@
 1. gcc main.c src/*.c -Iinclude -o gpconv 
+2. gcc test/test_gpconv.c src/gpconv.c -Iinclude -o test_gpconv
