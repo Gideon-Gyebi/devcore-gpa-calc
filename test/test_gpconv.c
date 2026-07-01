@@ -18,12 +18,14 @@ void testCase(int score, char *expected)
 
 int main()
 {
+    int i;
+    
     printf("===== GPA Converter Tests =====\n\n");
 
-    testCase(100, "A+");
-    testCase(90, "A+");
-    testCase(85, "A+");
-    testCase(80, "A");
+    for (i = 100; i >= 85; i--)
+    {
+        testCase(i, "A+");
+    }
 
     return 0;
 }
