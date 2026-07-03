@@ -1,12 +1,14 @@
-#include "gpa.h"
+#include "gpa.h" // Include the header file for GPA conversion
 
-char *gpconv(int score)
+char *gpconv(int score) // Function to convert a numerical score to a letter grade
 {
+    // Check if the score is within the valid range of 0 to 100
     if (score < 0 || score > 100)
     {
         return "INVALID";
     }
 
+    // Determine the letter grade based on the score
     if (score >= 85)
     {
         return "A+";
