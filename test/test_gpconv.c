@@ -51,5 +51,29 @@ int main()
         testCase(i, "C+");
     }
 
+    printf("\n");
+    for ( i = 64; i >= 60; i--)
+    {
+        testCase(i, "C");
+    }
+
+    printf("\n");
+    for (i = 59; i >= 55; i--)
+    {
+        testCase(i, "D+");
+    }
+
+    printf("\n");
+    for (i = 54; i >= 50; i--)
+    {
+        testCase(i, "D");
+    }
+
+    printf("\n");
+    for (i = 49; i >= 0; i--)
+    {
+        testCase(i, "F");
+    }
+
     return 0;
 }
