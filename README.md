@@ -1,3 +1,3 @@
-## PRJECT_GPA
+## PR0JECT_GPA
 - GPA
 - Calculator
