@@ -1,11 +1,14 @@
-#include <stdio.h>
-#include <string.h>
-#include "gpa.h"
+#include <stdio.h> // for printf
+#include <string.h> // for strcmp
+#include "gpa.h" // Include the header file for GPA conversion
 
+// Function to test the gpconv function with a given score and expected result
 void testCase(int score, char *expected)
 {
+    // Call the gpconv function to convert the score to a letter grade
     char *result = gpconv(score);
 
+    // Compare the result with the expected value
     if (strcmp(result, expected) == 0) // string compare = strcmp
     {
         printf("[PASS] Score: %3d -> %s\n", score, result);
@@ -16,12 +19,16 @@ void testCase(int score, char *expected)
     }
 }
 
+// Main function to run the test cases for the gpconv function
 int main()
 {
+    // Variable to iterate through the score ranges
     int i;
 
+    // Print the header for the GPA Converter Tests
     printf("===== GPA Converter Tests =====\n\n");
-    // running tests for each range
+
+    // Running tests for each range
     for (i = 100; i >= 85; i--)
     {
         testCase(i, "A+");
