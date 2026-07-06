@@ -25,6 +25,12 @@ Grading Systems
 
 Grande Point
 
+|Course|Score|Letter Grade(LG)|Numerical Equivalence(NE)|Credit Hours(CR)|Grade Point(GP)|
+|------|-----|----------------|-------------------------|----------------|---------------|
+|CS    |85   |A+              |5.0                      |2               |10.0           |
+|NS    |90   |A+              |5.0                      |2               |10.0           |
+|OPT   |78   |B+              |4.0                      |2               |8.0            |
+
 #credit hour#
 ComSkills = 2
 NumSkills = 2
