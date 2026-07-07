@@ -23,14 +23,24 @@ Grading Systems
 | BCP 109      | CSIM              | 3            |
 | Total Credit | Hours             | 18           |
 
-Grande Point
+
+**Grade Point**
 
 |Course|Score|Letter Grade(LG)|Numerical Equivalence(NE)|Credit Hours(CR)|Grade Point(GP)|
 |------|-----|----------------|-------------------------|----------------|---------------|
 |CS    |85   |A+              |5.0                      |2               |10.0           |
 |NS    |90   |A+              |5.0                      |2               |10.0           |
 |OPT   |78   |B+              |4.0                      |2               |8.0            |
+|FCS   |69   |C+              |3.0                      |3               |6.0            |
+|FCP   |67   |C+              |3.0                      |3               |6.0            |
+|MCS   |63   |C               |2.5                      |3               |7.5            |
+|CSIM  |52   |D               |1.5                      |3               |4.5            |
 
+
+
+
+**EXAMPLES**
+<!--THIS IS AN EXAMPLE CALCULATION-->
 #credit hour#
 ComSkills = 2
 NumSkills = 2
