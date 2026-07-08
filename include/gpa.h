@@ -9,7 +9,7 @@ from running to avoid duplicate definition errors.
 */
 #define GPA_H
 
-char *gpconv(int a); // Function prototype for 'gpconv'. Returns a pointer to a character string.
+char *scrconv(int a); // Function prototype for 'scrconv'. Returns a pointer to a character string.
 
 /*
 Closes the '#ifndef' conditional block and ends the definition of the 
