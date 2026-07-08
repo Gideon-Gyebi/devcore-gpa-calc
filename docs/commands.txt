@@ -1,9 +1,9 @@
 # COMMANDS FOR DEVELOPMENTS
 
 
-1. gcc main.c src/*.c -Iinclude -o obj/gpconv --> [command used to compile "main" executable]
+1. gcc main.c src/*.c -Iinclude -o obj/scrconv --> [command used to compile "main" executable]
 
-2. gcc test/test_gpconv.c src/gpconv.c -Iinclude -o obj/test_gpconv --> [command used to compile "test_gpconv" executable]
+2. gcc test/test_scrconv.c src/scrconv.c -Iinclude -o obj/test_scrconv --> [command used to compile "test_scrconv" executable]
 
 3. ./obj/<executable file name> --> [Git bash command to run compile program]
 
