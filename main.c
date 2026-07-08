@@ -12,8 +12,8 @@ int main() {
     printf("Enter a score: ");
     scanf("%d", &score);
 
-    // Call the gpconv function to convert the score to a letter grade
-    gradeLetter = gpconv(score);
+    // Call the scrconv function to convert the score to a letter grade
+    gradeLetter = scrconv(score);
 
     // Print the resulting letter grade to the console
     printf("%s\n", gradeLetter);
