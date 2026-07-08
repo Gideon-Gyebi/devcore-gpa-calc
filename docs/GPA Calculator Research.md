@@ -1,4 +1,4 @@
-Grading Systems
+# Grading Systems Research
 
 | Score | Letter Grade (LG) | Numerical Equivalence (NE) |
 | ---------- | ----------------- | -------------------------- |
@@ -35,29 +35,20 @@ Grading Systems
 |FCP   |67   |C+              |3.0                      |3               |6.0            |
 |MCS   |63   |C               |2.5                      |3               |7.5            |
 |CSIM  |52   |D               |1.5                      |3               |4.5            |
+|Total |     |                |                         |18              |52             |
 
 
 
-
-**EXAMPLES**
+**The GPA is calculated as follows:**
 <!--THIS IS AN EXAMPLE CALCULATION-->
-#credit hour#
-ComSkills = 2
-NumSkills = 2
-OPTools = 2
+``` 
+          Total GP
+    GPA = --------
+          Total CR
 
-Score grade-letter grade-point
-85	A+		5.0
-75	B+		4.0
-91	A+		5.0
+           52
+        = ----
+           18
 
-total grade point = 5+4+5 = 14.0
-total credit hours = 2+2+2 = 6
-
-
-
-total grade point
-__________________
-total credit hours
-
-14/6 = 2.33
+        = 2.89
+```
