@@ -2,11 +2,11 @@
 #include <string.h> // for strcmp
 #include "gpa.h" // Include the header file for GPA conversion
 
-// Function to test the gpconv function with a given score and expected result
+// Function to test the scrconv function with a given score and expected result
 void testCase(int score, char *expected)
 {
-    // Call the gpconv function to convert the score to a letter grade
-    char *result = gpconv(score);
+    // Call the scrconv function to convert the score to a letter grade
+    char *result = scrconv(score);
 
     // Compare the result with the expected value
     if (strcmp(result, expected) == 0) // string compare = strcmp
@@ -19,7 +19,7 @@ void testCase(int score, char *expected)
     }
 }
 
-// Main function to run the test cases for the gpconv function
+// Main function to run the test cases for the scrconv function
 int main()
 {
     // Variable to iterate through the score ranges
