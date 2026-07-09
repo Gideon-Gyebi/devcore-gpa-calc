@@ -40,26 +40,35 @@ This project converts a student's numerical score into its corresponding letter 
 DEVCORE-GPA-CALC/
 │
 ├── docs/
-│   ├── commands.txt
-│   ├── GPA Calculator Research.md
-│   ├── GPA_calc_LG_converter_function_flowchart.drawio.png
-│   ├── markdown_cheatsheet.md
-│   ├── scratch_pad.txt
+│   ├── solutions/
+│   │   ├── gpa_calculator_research.md
+│   │   ├── scrconv_flowchart.drawio.png
+│   │   ├── solution_scrconv.md
+│   │   ├── solution_lgconv.md
+│   │   ├── 
+│   │   └── 
+│   ├── worksheet/
+│   │   ├── commands.txt
+│   │   ├── markdown_cheatsheet.md
+│   │   ├── scratch_pad.txt
+│   │   ├── 
+│   │   └──
 │   ├── setup.md
-│   └── Solutions.md
+│   ├── 
+│   └── 
 │
 ├── include/
 │   └── gpa.h
 │
 ├── obj/
-│   ├── gpconv.exe
-│   └── test_gpconv.exe
+│   ├── scrconv.exe
+│   └── test_scrconv.exe
 │
 ├── src/
-│   └── gpconv.c
+│   └── scrconv.c
 │
 ├── test/
-│   └── test_gpconv.c
+│   └── test_scrconv.c
 │
 ├── ui/
 │   └── gui.c
@@ -86,13 +95,13 @@ DEVCORE-GPA-CALC/
 Compile the application:
 
 ```bash
-gcc main.c src/gpconv.c -Iinclude -o obj/gpconv.exe
+gcc main.c src/scrconv.c -Iinclude -o obj/scrconv.exe
 ```
 
 Compile the test program:
 
 ```bash
-gcc test/test_gpconv.c src/gpconv.c -Iinclude -o obj/test_gpconv.exe
+gcc test/test_scrconv.c src/scrconv.c -Iinclude -o obj/test_scrconv.exe
 ```
 
 ---
@@ -102,7 +111,7 @@ gcc test/test_gpconv.c src/gpconv.c -Iinclude -o obj/test_gpconv.exe
 Run the main program:
 
 ```bash
-./obj/gpconv.exe
+./obj/scrconv.exe
 ```
 
 Example:
@@ -115,7 +124,7 @@ A
 Run the test suite:
 
 ```bash
-./obj/test_gpconv.exe
+./obj/test_scrconv.exe
 ```
 
 Expected output:
@@ -157,7 +166,7 @@ Contains:
 
 ---
 
-## src/gpconv.c
+## src/scrconv.c
 
 Core application logic.
 
@@ -171,7 +180,7 @@ Responsibilities:
 
 ---
 
-## test/test_gpconv.c
+## test/test_scrconv.c
 
 Automated testing program.
 
@@ -185,10 +194,10 @@ Responsibilities:
 
 # Function Documentation
 
-## gpconv()
+## scrconv()
 
 ```c
-char *gpconv(int score);
+char *scrconv(int score);
 ```
 
 Converts a numerical score into a letter grade.
