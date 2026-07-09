@@ -19,17 +19,17 @@ This project converts a student's numerical score into its corresponding letter 
 
 ## Grade Scale
 
-| Score Range | Grade |
-|-------------|-------|
-| 85 - 100 | A+ |
-| 80 - 84 | A |
-| 75 - 79 | B+ |
-| 70 - 74 | B |
-| 65 - 69 | C+ |
-| 60 - 64 | C |
-| 55 - 59 | D+ |
-| 50 - 54 | D |
-| 0 - 49 | F |
+| Score Range   | Grade   |
+|---------------|---------|
+| 85 - 100      | A+      |
+| 80 - 84       | A       |
+| 75 - 79       | B+      |
+| 70 - 74       | B       |
+| 65 - 69       | C+      |
+| 60 - 64       | C       |
+| 55 - 59       | D+      |
+| 50 - 54       | D       |
+| 0 - 49        | F       |
 | Outside 0-100 | INVALID |
 
 ---
