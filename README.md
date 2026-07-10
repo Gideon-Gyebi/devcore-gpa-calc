@@ -8,7 +8,9 @@ This project converts a student's numerical score into its corresponding letter 
 
 ## Features
 
-- Convert numerical scores (0–100) into letter grades
+- Convert numerical scores (0–100) into letter grades (LG)
+- Convert letter grades (LG) to grade value (GV)
+- Calculate grade point (GP)
 - Validate invalid inputs
 - Modular source code using header files
 - Automated unit-style test program
