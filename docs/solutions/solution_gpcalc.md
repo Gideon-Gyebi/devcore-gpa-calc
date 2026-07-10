@@ -3,4 +3,18 @@
 2. Multiple it with the credit hour
 3. Sum all the products to get the total grade point
 
+```
+Course
+↓
+Score
+↓
+Grade Value
+↓
+Credit Hours
+↓
+Grade Point
+↓
+Total Grade Point
+```
+
 # Pseudocode
