@@ -8,6 +8,8 @@ Course
 ↓
 Score
 ↓
+Letter Grade
+↓
 Grade Value
 ↓
 Credit Hours
