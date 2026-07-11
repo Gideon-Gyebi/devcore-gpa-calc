@@ -3,7 +3,7 @@
 ## <span style="color:green;">Functions</span>
 - **`scrconv`** --> Score Converter
 - **`lgconv`**  --> Letter Converter
-- **`gpcalc`**  --> Grade Point Calcula
+- **`gpcalc`**  --> Grade Point Calculator
 
 ## <span style="color:green;">Documentation</span>
 - **`COS`** --> Course
