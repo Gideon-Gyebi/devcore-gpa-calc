@@ -1,10 +1,10 @@
 # GKGDev Core 5: Sprint Setup Check List
 
-1. **Install VS Code**
+**1.** **Install VS Code**
 	- install extension (C/C++, Code Runner)
 
 
-2. Install Git for windows
+**2.** Install Git for windows
 	- Default editor -> Select: VS Code as default Git editor
 	- PATH environment -> Select: Git from the command line and also from 3rd-party software
 	- Line ending conversion -> Select: Checkout Windows-style, commit Unix-style line endings
@@ -12,7 +12,7 @@
 				Select: Use MinTTY (default terminal) → gives Git Bash
 
 
-3. Install MSYS2 (Build Tools for C)
+**3.** Install MSYS2 (Build Tools for C)
 	- open msys2 mingw64 terminal -> run `pacman -Syu`
 	- close terminal when done and re-open -> run `pacman -Syu` one more time to complete
 	- install dependences -> run
@@ -26,7 +26,7 @@
 	- or as one command -> `pacman -S mingw-w64-x86_64-gtk4 mingw-w64-x86_64-gcc mingw-w64-x86_64-pkg-config`
 
 
-4. In VS Code
+**4.** In VS Code
 	- open command palette -> ctrl + shift + p
 	- type -> 'C/C++: Edit configurations (UI)' and open it
 	- look for "Include path" -> paste paths
@@ -36,7 +36,7 @@
 		`C:/msys64/mingw64/lib/*/include/**`
 
 
-5. Add MSYS2 MinGW64 terminal profile in VS Code
+**5.** Add MSYS2 MinGW64 terminal profile in VS Code
 	- open command palette -> ctrl + shift + p
 	- type -> 'Preferences: Open User Settings (JSON)' and open it
 
@@ -76,10 +76,10 @@ OR
 
 <span style="color:red;">NOTE:</span> If "terminal.integrated.profile.window" has already been added, then copy the terminal you want to add. Start from the terminal name (eg. "MSYS2 MinGW64") to end at curly bracket '}'.
 
-6. Command to compile GTK4 GUI App
+**6.** Command to compile GTK4 GUI App
 	- gcc <source-code.c> -o <app-name> `pkg-config --cflags --libs gtk4`
 
-7. Side note
+**7.** Side note
 TROUBLESHOOTING SECTION
 
 - added to path
