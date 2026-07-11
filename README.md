@@ -45,14 +45,19 @@ DEVCORE-GPA-CALC/
 │   ├── solutions/
 │   │   ├── gpa_calculator_research.md
 │   │   ├── scrconv_flowchart.drawio.png
-│   │   ├── solution_scrconv.md
-│   │   ├── solution_lgconv.md
 │   │   ├── 
+│   │   ├── gpcalc_flowchart.drawio.png
+│   │   ├── solution_scrconv.md
+│   │   ├── 
+│   │   ├── solution_gpcalc.md
+│   │   ├──
 │   │   └── 
 │   ├── worksheet/
 │   │   ├── commands.txt
 │   │   ├── markdown_cheatsheet.md
 │   │   ├── scratch_pad.txt
+│   │   ├── dictionary.md
+│   │   ├── naming_std.md
 │   │   ├── 
 │   │   └──
 │   ├── setup.md
