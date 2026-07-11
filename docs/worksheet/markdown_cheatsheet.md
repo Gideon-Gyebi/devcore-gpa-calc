@@ -118,6 +118,9 @@ INLINE HTML (Optional)
 <sub>Subscript</sub>
 
 <span style="color:red;">Colored text</span>
+
+<span style="color:#FFFF00;">Colored text</span>
+
 (Note: HTML support depends on the Markdown renderer.)
 
 COMMON KEYBOARD CHARACTERS
