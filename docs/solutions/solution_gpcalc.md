@@ -1,7 +1,7 @@
 # Algorithm
-1. Take grade value (lgconv) of letter grade
-2. Multiple it with the credit hour
-3. Sum all the products to get the total grade point
+1. Create to two variables to store grade values and credit hours
+2. Multiple the integer values stored in variables
+3. Output the product to get the grade point
 
 ```
 Course
@@ -19,4 +19,12 @@ Grade Point
 Total Grade Point
 ```
 
+``` C
+int gpcalc(int gradeValue, int creditHours);
+```
+
 # Pseudocode
+1. START
+2. `int gradeValue`
+3. `int creditHours`
+4. `return gradeValue * creditHours`
