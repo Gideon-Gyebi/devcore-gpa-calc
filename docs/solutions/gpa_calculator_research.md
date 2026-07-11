@@ -26,7 +26,7 @@
 
 **Grade Point**
 
-|Course|Score|Letter Grade(LG)|Grade Value(NE)|Credit Hours(CR)|Grade Point(GP)|
+|Course|Score|Letter Grade(LG)|Grade Value(GV)|Credit Hours(CR)|Grade Point(GP)|
 |------|-----|----------------|---------------|----------------|---------------|
 |CS    |85   |A+              |5.0            |2               |10.0           |
 |NS    |90   |A+              |5.0            |2               |10.0           |
