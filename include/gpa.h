@@ -9,8 +9,8 @@ from running to avoid duplicate definition errors.
 */
 #define GPA_H
 
-char *scrconv(int a); // Function prototype for 'scrconv'. Returns a pointer to a character string.
-int gpcalc(int gradeValue, int creditHours); // Function prototype for 'gpcalc'. Returns an integer grade value.
+char *scrconv(int score); // Function prototype for 'scrconv'. Returns a pointer to a character string.
+float gpcalc(float gradeValue, float creditHours); // Function prototype for 'gpcalc'. Returns a float grade value.
 
 /*
 Closes the '#ifndef' conditional block and ends the definition of the 
