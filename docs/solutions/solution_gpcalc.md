@@ -25,6 +25,6 @@ int gpcalc(int gradeValue, int creditHours);
 
 # Pseudocode
 1. START
-2. `int gradeValue`
-3. `int creditHours`
-4. `return gradeValue * creditHours`
+2. FUNCTION `gpcalc(gradeValue,creditHours)`
+3. `return gradeValue * creditHours`
+4. END
