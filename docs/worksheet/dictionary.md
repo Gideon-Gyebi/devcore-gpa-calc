@@ -4,12 +4,13 @@
 - **`scrconv`** --> Score Converter
 - **`lgconv`**  --> Letter Converter
 - **`gpcalc`**  --> Grade Point Calculator
+- **`getch`**  --> Get Credit Hours
 
 ## <span style="color:green;">Documentation</span>
 - **`COS`** --> Course
 - **`SCR`** --> Score
 - **`LG`** --> Letter Grade
 - **`GV`** --> Grade Value
-- **`CR`** --> Credit Hours
+- **`CH`** --> Credit Hours
 - **`GP`** --> Grade Point
 - **`TGA`** --> Total Grade Point

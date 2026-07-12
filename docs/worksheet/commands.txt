@@ -1,7 +1,7 @@
 # COMMANDS FOR DEVELOPMENTS
 
 
-1. gcc main.c src/*.c -Iinclude -o obj/scrconv --> [command used to compile "main" executable]
+1. gcc main.c src/*.c -Iinclude -o obj/gpacalc --> [command used to compile "main" executable]
 
 2. gcc test/test_scrconv.c src/scrconv.c -Iinclude -o obj/test_scrconv --> [command used to compile "test_scrconv" executable]
 
