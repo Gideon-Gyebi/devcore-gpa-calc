@@ -6,7 +6,7 @@ int main() {
 
     // Declare variables for the score and the resulting letter grade
     int score;
-    char *gradeLetter;
+    char *letterGrade;
     float creditHours;
     // int gradePoint;
 
@@ -18,13 +18,13 @@ int main() {
     creditHours = getch();
 
     // Call the scrconv function to convert the score to a letter grade
-    gradeLetter = scrconv(score);
+    letterGrade = scrconv(score);
 
     // Call the gpcalc function to calculate the grade point
     // gradePoint = gpcalc(gradeValue, creditHours);
 
     // Print the results to the console
-    printf("Grade Letter: %s\n", gradeLetter);
+    printf("Grade Letter: %s\n", letterGrade);
     printf("Credit Hours: %.1f\n", creditHours);
 
     // printf("Grade Point: %.1f\n", gradePoint);
