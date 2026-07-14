@@ -6,15 +6,15 @@
 ```
 Course
 ↓
-Score
+Score ✓
 ↓
-Letter Grade
+Letter Grade ✓
 ↓
-Grade Value
+Grade Value ✓
 ↓
-Credit Hours
+Credit Hours X
 ↓
-Grade Point
+Grade Point X
 ↓
 Total Grade Point
 ```
