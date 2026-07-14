@@ -59,8 +59,7 @@ DEVCORE-GPA-CALC/
 │   │   ├── naming_std.md
 │   │   ├── scratch_pad.txt
 │   ├── setup.md
-│   ├── 
-│   └── 
+│   
 │
 ├── include/
 │   └── gpa.h
@@ -70,10 +69,10 @@ DEVCORE-GPA-CALC/
 │   └── test_scrconv.exe
 │
 ├── src/
+│   └── getch.c
+|   ├── gpcalc.c
 │   └── scrconv.c
-|       getch.c
-        scrconv.c
-        
+         
 ├── test/
 │   └── test_scrconv.c
 │
