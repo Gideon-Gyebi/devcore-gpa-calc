@@ -4,6 +4,18 @@
 3. Create a conditional statement to determine which LG correspond to the Grade Value(NE)
 4. Output the result
 
+```
+LG 
+↓
+convert LG
+↓
+GV
+
+```
+
+``` C 
+float lgconv(char *letterGrade)
+```
 # Pseudocode
 1. Start 
 2. char *gradeLetter
