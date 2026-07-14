@@ -11,3 +11,6 @@ for (i = 100; i >= 85; i--)
 let to num -> lgconv
 char to gpa
 gpconv -> scrconv
+
+
+if (strcmp(result, expected) == 0)
