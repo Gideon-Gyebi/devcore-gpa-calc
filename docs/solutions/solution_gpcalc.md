@@ -4,7 +4,7 @@
 3. Output the product to get the grade point
 
 ```
-Course
+**Course**
 ↓
 Score ✓
 ↓
@@ -12,11 +12,13 @@ Letter Grade ✓
 ↓
 Grade Value ✓
 ↓
-Credit Hours X
+**Credit Hours** X
 ↓
-Grade Point X
+Grade Point ✓
 ↓
-Total Grade Point
+**Total Grade Point**
+↓
+**Total Credit Hours**
 ```
 
 ``` C
