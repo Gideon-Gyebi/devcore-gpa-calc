@@ -49,6 +49,7 @@ DEVCORE-GPA-CALC/
 │   │   ├── lgconv_flowchart.drawio.png
 │   │   ├── scrconv_flowchart.drawio.png
 │   │   ├── solution_getch.md
+│   │   ├── solution_getscr.md
 │   │   ├── solution_gpcalc.md
 │   │   ├── solution_lgconv.md
 │   │   └── solution_srconv.md
@@ -69,7 +70,8 @@ DEVCORE-GPA-CALC/
 │   └── test_scrconv.exe
 │
 ├── src/
-│   └── getch.c
+│   ├── getch.c
+│   ├── getscr.c
 |   ├── gpcalc.c
 │   └── scrconv.c
          

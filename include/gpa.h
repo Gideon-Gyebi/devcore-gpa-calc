@@ -10,6 +10,7 @@ from running to avoid duplicate definition errors.
 #define GPA_H
 
 float getch(void);                                 // Function prototype for 'getch'. Returns a float value representing the number of credit hours.
+int getscr(void);                                 // Function prototype for 'getscr'. Returns an integer value representing the score.
 char *scrconv(int score);                          // Function prototype for 'scrconv'. Returns a pointer to a character string.
 float gpcalc(float gradeValue, float creditHours); // Function prototype for 'gpcalc'. Returns a float grade value.
 float lgconv(char *letterGrade);
