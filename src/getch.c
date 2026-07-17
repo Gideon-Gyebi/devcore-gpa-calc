@@ -20,5 +20,7 @@ float getch(void)
         return -1; // Return an error value
     }
 
+    while (getchar() != '\n'); // Clear the input buffer to remove any leftover characters
+
     return creditHours;
 }
