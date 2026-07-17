@@ -5,6 +5,7 @@
 - **`lgconv`**  --> Letter Converter
 - **`gpcalc`**  --> Grade Point Calculator
 - **`getch`**  --> Get Credit Hours
+- **`getscr`**  --> Get Score
 
 ## <span style="color:green;">Documentation</span>
 - **`COS`** --> Course
