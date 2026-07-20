@@ -12,7 +12,7 @@ Letter Grade ✓
 ↓
 Grade Value ✓
 ↓
-**Credit Hours** X
+Credit Hours ✓
 ↓
 Grade Point ✓
 ↓
