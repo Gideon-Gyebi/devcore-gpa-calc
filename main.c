@@ -11,6 +11,10 @@ int main()
     float gradeValue;
     float creditHours;
     float gradePoint;
+    int selectedCourse;
+
+    // Call the getcrs function to select a course
+    selectedCourse = getcos();
 
     // Prompt the user to enter a score and read the input
     score = getscr();
