@@ -45,10 +45,13 @@ DEVCORE-GPA-CALC/
 │   ├── solutions/
 │   │   ├── getch_flowchart.drawio.png
 │   │   ├── gpa_calculator_research.md
+│   │   ├── getcos_flowchart.drawio.png
+│   │   ├── getscr_flowchart.drawio.png
 │   │   ├── gpcalc_flowchart.drawio.png
 │   │   ├── lgconv_flowchart.drawio.png
 │   │   ├── scrconv_flowchart.drawio.png
 │   │   ├── solution_getch.md
+│   │   ├── solution_getcos.md
 │   │   ├── solution_getscr.md
 │   │   ├── solution_gpcalc.md
 │   │   ├── solution_lgconv.md
@@ -67,13 +70,14 @@ DEVCORE-GPA-CALC/
 │
 ├── obj/
 │   ├── scrconv.exe
-│   └── test_scrconv.exe
 │
 ├── src/
 │   ├── getch.c
 │   ├── getscr.c
 |   ├── gpcalc.c
 │   └── scrconv.c
+│   └── getcos.c
+│   └── lgconv.c
          
 ├── test/
 │   └── test_scrconv.c
@@ -85,6 +89,7 @@ DEVCORE-GPA-CALC/
 ├── LICENSE
 ├── main.c
 └── README.md
+└── test_gpconv.exe
 ```
 
 ---
