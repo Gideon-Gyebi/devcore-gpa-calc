@@ -2,7 +2,7 @@
 #include "gpa.h" // Include the header file for GPA calculation
 
 // Function to get the selected course
-int getcos()
+int getcrs()
 {
     int course;
 
