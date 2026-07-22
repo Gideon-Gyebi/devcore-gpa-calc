@@ -8,7 +8,7 @@
 - **`getscr`**  --> Get Score
 
 ## <span style="color:green;">Documentation</span>
-- **`COS`** --> Course
+- **`CRS`** --> Course
 - **`SCR`** --> Score
 - **`LG`** --> Letter Grade
 - **`GV`** --> Grade Value
