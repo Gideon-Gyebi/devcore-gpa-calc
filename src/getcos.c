@@ -16,12 +16,11 @@ int getcos()
     printf("6. Office productivity\n");
     printf("7. Fundamentals of computer science\n");
 
-
     // Prompt the user until a valid choice is entered
     do
     {
         printf("\nSelect a course (1-7): "); // Prompt the user to select a course
-        scanf("%d", &course); // Read the user's input for the course number
+        scanf("%d", &course);                // Read the user's input for the course number
 
         if (course < 1 || course > 7) // Check if the input is within the valid range (1 to 7)
         {
