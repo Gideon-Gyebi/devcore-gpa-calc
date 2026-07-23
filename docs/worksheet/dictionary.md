@@ -6,7 +6,7 @@
 - **`gpcalc`**  --> Grade Point Calculator
 - **`getch`**  --> Get Credit Hours
 - **`getscr`**  --> Get Score
-- **`getcos`**  --> Get Course
+- **`getcrs`**  --> Get Course
 
 
 ## <span style="color:green;">Documentation</span>
