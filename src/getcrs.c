@@ -2,9 +2,9 @@
 #include "gpa.h" // Include the header file for GPA calculation
 
 // Function to get the selected course
-int getcrs()
+char *getcrs(void)
 {
-    int course;
+    char *course;
 
     // Display the list of available courses
     printf("\n AVAILABLE COURSES \n");
@@ -24,11 +24,12 @@ int getcrs()
 
         if (course < 1 || course > 7) // Check if the input is within the valid range (1 to 7)
         {
-            printf("Error: Invalid course number. Please try again.\n"); // Display an error message if the input is invalid
+            printf("GETCRS_Error: Course number should range from 1 to 7.\n"); // Display an error message if the input is invalid
         }
 
     } while (course < 1 || course > 7); // Repeat the prompt until a valid course number is entered
 
     // Return the selected course
+
     return course;
 }
