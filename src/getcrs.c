@@ -9,7 +9,7 @@ char *getcrs(void)
     // Display the list of available courses
     printf("\n AVAILABLE COURSES \n");
     printf("1. Programming Fundamentals\n");
-    printf("2. Mathematics for computer Science\n");
+    printf("2. Mathematics for Computer Scientists\n");
     printf("3. Communication Skills\n");
     printf("4. Numeracy skills\n");
     printf("5. Computer system installation and maintenance\n");
