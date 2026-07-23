@@ -11,10 +11,10 @@ int main()
     float gradeValue;
     float creditHours;
     float gradePoint;
-    int selectedCourse;
+    char *selectedCourse;
 
     // Call the getcrs function to select a course
-    selectedCourse = getcos();
+    selectedCourse = getcrs();
 
     // Prompt the user to enter a score and read the input
     score = getscr();
@@ -32,8 +32,9 @@ int main()
     gradePoint = gpcalc(gradeValue, creditHours);
 
     // Print the results to the console
-    //displayResults(letterGrade, creditHours, gradeValue, gradePoint);
+    // displayResults(letterGrade, creditHours, gradeValue, gradePoint);
 
+    printf("Selected Course: %s\n", selectedCourse);
     printf("Grade Letter: %s\n", letterGrade);
     printf("Credit Hours: %.1f\n", creditHours);
     printf("Grade Value: %.1f\n", gradeValue);
