@@ -76,7 +76,7 @@ DEVCORE-GPA-CALC/
 │   ├── getscr.c
 |   ├── gpcalc.c
 |   ├── scrconv.c
-|   ├── getcos.c
+|   ├── getcrs.c
 │   └── lgconv.c
          
 ├── test/
