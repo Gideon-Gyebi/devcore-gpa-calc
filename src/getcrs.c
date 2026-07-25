@@ -5,31 +5,72 @@
 char *getcrs(void)
 {
     char *course;
+    int choice;
+    char clear; // Variable to clear the input buffer
 
     // Display the list of available courses
     printf("\n AVAILABLE COURSES \n");
     printf("1. Programming Fundamentals\n");
-    printf("2. Mathematics for Computer Scientists\n");
+    printf("2. Mathematics for computer Science\n");
     printf("3. Communication Skills\n");
     printf("4. Numeracy skills\n");
     printf("5. Computer system installation and maintenance\n");
     printf("6. Office productivity\n");
     printf("7. Fundamentals of computer science\n");
+    printf("8. Others [Enter the course name manually]\n"); // Prompt the user to select a course
 
     // Prompt the user until a valid choice is entered
     do
     {
-        printf("\nSelect a course (1-7): "); // Prompt the user to select a course
-        scanf("%d", &course);                // Read the user's input for the course number
-
-        if (course < 1 || course > 7) // Check if the input is within the valid range (1 to 7)
+        printf("\nSelect a course (1-8): "); // Prompt the user to select a course
+        if (scanf("%d", &choice) != 1)       // Check if the input is valid . To read the user's input for the course number
         {
-            printf("GETCRS_Error: Course number should range from 1 to 7.\n"); // Display an error message if the input is invalid
+            fprintf(stderr, "GETSCR_Error: Invalid input; please enter a number.\n"); // Print an error message to standard error
+            while (getchar() != '\n')
+                ; // Clear the input buffer to remove any leftover characters
         }
-
-    } while (course < 1 || course > 7); // Repeat the prompt until a valid course number is entered
+        else if (choice < 1 || choice > 8) // Check if the input is within the valid range (1 to 8)
+        {
+            fprintf(stderr, "GETCRS_Error: Course number should range from 1 to 8.\n"); // Display an error message if the input is invalid
+            while (getchar() != '\n')
+                ;
+            // Clear the input buffer to remove any leftover characters
+        }
+        else if (scanf("%c", &clear) == 1 && clear != '\n') // Check if there are any leftover characters in the input buffer
+        {
+            fprintf(stderr, "GETCRS_Warning: Extra characters are not allowed.\n"); // Print an error message to standard error
+            while (getchar() != '\n')
+                ; // Clear the input buffer to remove any leftover characters
+        }
+    } while (choice < 1 || choice > 8); // Repeat the prompt until a valid course number is entered
 
     // Return the selected course
-
-    return course;
+    switch (choice)
+    {
+    case 1:
+        return "Programming Fundamentals";
+        break;
+    case 2:
+        return "Mathematics for computer Science";
+        break;
+    case 3:
+        return "Communication Skills";
+        break;
+    case 4:
+        return "Numeracy skills";
+        break;
+    case 5:
+        return "Computer system installation and maintenance";
+        break;
+    case 6:
+        return "Office productivity";
+        break;
+    case 7:
+        return "Fundamentals of computer science";
+        break;
+    case 8:
+        printf("Enter the course name: "); // Prompt the user to enter the course name manually
+        scanf("%s", course);               // Read the course name from the user
+        return course;
+    }
 }
