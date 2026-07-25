@@ -34,7 +34,7 @@ int main()
     // Print the results to the console
     // displayResults(letterGrade, creditHours, gradeValue, gradePoint);
 
-    printf("Selected Course: %s\n", selectedCourse);
+    printf("\nSelected Course: %s\n", selectedCourse);
     printf("Grade Letter: %s\n", letterGrade);
     printf("Credit Hours: %.1f\n", creditHours);
     printf("Grade Value: %.1f\n", gradeValue);
