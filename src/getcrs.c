@@ -4,7 +4,7 @@
 // Function to get the selected course
 char *getcrs(void)
 {
-    char *course;
+    static char course[100]; // Static array to store the course name
     int choice;
     char clear; // Variable to clear the input buffer
 
@@ -70,7 +70,7 @@ char *getcrs(void)
         break;
     case 8:
         printf("Enter the course name: "); // Prompt the user to enter the course name manually
-        scanf("%s", course);               // Read the course name from the user
+        scanf("%99[^\n]", course);               // Read the course name from the user
         return course;
     }
 }
