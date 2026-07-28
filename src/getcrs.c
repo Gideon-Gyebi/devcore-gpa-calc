@@ -70,7 +70,7 @@ char *getcrs(void)
         break;
     case 8:
         printf("Enter the course name: "); // Prompt the user to enter the course name manually
-        scanf("%99[^\n]", course);               // Read the course name from the user
+        scanf("%99[^\n]", course);         // Read the course name from the user
         return course;
     }
 }
