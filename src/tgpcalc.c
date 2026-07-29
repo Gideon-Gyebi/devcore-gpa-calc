@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "gpa.h"
 
-float tgacalc(float gradePoint, float gradeValue)
+float tgpcalc(float gradePoint, float gradeValue)
 {
     int score;
     char *letterGrade;
