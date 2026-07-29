@@ -16,3 +16,20 @@ gpconv -> scrconv
 if (strcmp(result, expected) == 0)
 
 next
+
+int num1 (0x7ffe5367e044)
+int num2 (0x7ffe5367e045)
+
+num1 = 20
+
+num1 = num2
+
+printf("%i", num1) / printf("%i", 0x7ffe5367e044)
+
+Terminal => "20"
+
+(num1) 0x7ffe5367e044 -> (num2) 0x7ffe5367e045
+
+printf("%i", num1) / printf("%i", 0x7ffe5367e045) 
+
+Terminal => ""
