@@ -15,7 +15,7 @@ char *scrconv(int score);                          // Function prototype for 'sc
 float gpcalc(float gradeValue, float creditHours); // Function prototype for 'gpcalc'. Returns a float grade value.
 float lgconv(char *letterGrade);
 char *getcrs();
-// float tgacalc(float gradePoint, float gradeValue);
+float tgpcalc(float gradePoint, float gradeValue);
 
 /*
 Closes the '#ifndef' conditional block and ends the definition of the

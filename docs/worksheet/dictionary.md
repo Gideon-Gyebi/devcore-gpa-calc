@@ -16,4 +16,4 @@
 - **`GV`** --> Grade Value
 - **`CH`** --> Credit Hours
 - **`GP`** --> Grade Point
-- **`TGA`** --> Total Grade Point
+- **`TGP`** --> Total Grade Point
