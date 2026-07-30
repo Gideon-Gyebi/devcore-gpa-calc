@@ -39,6 +39,7 @@ int main()
     printf("Credit Hours: %.1f\n", creditHours);
     printf("Grade Value: %.1f\n", gradeValue);
     printf("Grade Point: %.1f\n", gradePoint);
+    printf("Total Grade Point: %.1f\n", tgacalc(gradePoint, gradeValue));
 
     return 0;
 }
