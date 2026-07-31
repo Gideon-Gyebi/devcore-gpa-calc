@@ -15,21 +15,68 @@ gpconv -> scrconv
 
 if (strcmp(result, expected) == 0)
 
-next
+static char course[100]; // Declare a persistent storage for the course name to avoid returning a pointer to a local variable
 
-int num1 (0x7ffe5367e044)
-int num2 (0x7ffe5367e045)
+#include <stdio.h> // Include the standard input/output library
+#include <stdlib.h> // Include the standard library for memory allocation
+#include <string.h> // Include the string library for string manipulation
+#include "gpa.h" // Include the header file for GPA calculation
 
-num1 = 20
+Future Improvements (V2)
 
-num1 = num2
+- Replace repetitive input validation.
+- Use switch instead of long if-else chains.
+- Replace scanf with fgets + conversion.
+- Store courses in an array instead of hardcoding.
+- Introduce structs for course records.
+- Improve error handling.
 
-printf("%i", num1) / printf("%i", 0x7ffe5367e044)
 
-Terminal => "20"
+"printf() displays normal program results. fprintf(stderr, ...) displays problems, warnings, and error messages. They both print text, but they have different destinations."
 
-(num1) 0x7ffe5367e044 -> (num2) 0x7ffe5367e045
+A simple analogy:
 
-printf("%i", num1) / printf("%i", 0x7ffe5367e045) 
+* stdout = the official report
+* stderr = the notification channel saying something went wrong
 
-Terminal => ""
+Both may appear on the same screen, but they are separate internally.
+
+
+else if (scanf("%c", &clear) == 1 && clear != '\n')
+// "The first scanf reads the number. The second scanf checks whether anything other than Enter was left behind.
+// If there is, the input is considered invalid and the remaining characters are cleared from the input buffer."
+
+scanf("%c", &clear) → checks whether there was an extra character after the integer.
+while (getchar() != '\n'); → clears everything that remains, including the newline.
+
+
+
+## main.c (Testing the storage function)
+``` C
+#include <stdio.h>
+#include "GPA.h"
+
+
+int main()
+{
+    // Create storage for GPA records
+    Ggp_Record gpaStorage[MAX_COURSES];
+
+
+    // Example calculated values from previous functions
+    int creditHour = 3;
+    float gradePoint = 15.0;
+
+
+    // Save first course record
+    savechgp(gpaStorage, 0, creditHour, gradePoint);
+
+
+    // Display saved values for testing
+    printf("Credit Hour: %d\n", gpaStorage[0].creditHour);
+    printf("Grade Point: %.2f\n", gpaStorage[0].gradePoint);
+
+
+    return 0;
+}
+```
