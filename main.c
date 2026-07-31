@@ -20,6 +20,7 @@ int main()
     char *selectedCourse;
     int numCourses;
     int index = 0; // Initialize index for storing GPA records
+    float totalCreditHours;
 
     // Call the getnumcrs function to get the number of courses
     numCourses = getnumcrs();
@@ -56,6 +57,10 @@ int main()
         printf("Grade Value: %.1f\n", gradeValue);
         printf("Grade Point: %.1f\n", gradePoint);
     }
+
+    // Call the tchcalc function to calculate the total credit hours
+    totalCreditHours = tchcalc(gpaStorage, numCourses);
+    printf("\nTotal Credit Hours: %.1f\n", totalCreditHours);
 
     /*
     // Call the getcrs function to select a course

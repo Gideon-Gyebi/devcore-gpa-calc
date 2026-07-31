@@ -31,6 +31,7 @@ char *scrconv(int score);                          // Function prototype for 'sc
 float gpcalc(float gradeValue, float creditHours); // Function prototype for 'gpcalc'. Returns a float grade value.
 float lgconv(char *letterGrade);                   // Function prototype for 'lgconv'. Returns a float value representing the letter grade.
 float tgpcalc(float gradePoint, float gradeValue);
+float tchcalc(GpaRecord gpaStorage[], int numCourses); // Function prototype for 'tchcalc'. Returns a float value representing the total credit hours of all stored courses.
 
 /*
 Closes the '#ifndef' conditional block and ends the definition of the
