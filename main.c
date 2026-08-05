@@ -21,6 +21,7 @@ int main()
     int numCourses;
     int index = 0; // Initialize index for storing GPA records
     float totalCreditHours;
+    float totalGradePoints;
 
     // Call the getnumcrs function to get the number of courses
     numCourses = getnumcrs();
@@ -63,37 +64,37 @@ int main()
     printf("\nTotal Credit Hours: %.1f\n", totalCreditHours);
 
     /*
-    // Call the getcrs function to select a course
-    selectedCourse = getcrs();
+ // Call the getcrs function to select a course
+ selectedCourse = getcrs();
 
-    // Call the getch function to read the credit hours
-    creditHours = getch();
+ // Call the getch function to read the credit hours
+ creditHours = getch();
 
-    // Prompt the user to enter a score and read the input
-    score = getscr();
+ // Prompt the user to enter a score and read the input
+ score = getscr();
 
-    // Call the scrconv function to convert the score to a letter grade
-    letterGrade = scrconv(score);
+ // Call the scrconv function to convert the score to a letter grade
+ letterGrade = scrconv(score);
 
-    // Call the lgconv function to convert the letter grade to a grade value
-    gradeValue = lgconv(letterGrade);
+ // Call the lgconv function to convert the letter grade to a grade value
+ gradeValue = lgconv(letterGrade);
 
-    // Call the gpcalc function to calculate the grade point
-    gradePoint = gpcalc(gradeValue, creditHours);
+ // Call the gpcalc function to calculate the grade point
+ gradePoint = gpcalc(gradeValue, creditHours);
 
-    // Save first course record
-    savechgp(gpaStorage, 0, creditHours, gradePoint);
+ // Save first course record
+ savechgp(gpaStorage, 0, creditHours, gradePoint);
 
-    // Print the results to the console
-    // displayResults(letterGrade, creditHours, gradeValue, gradePoint);
+ // Print the results to the console
+ // displayResults(letterGrade, creditHours, gradeValue, gradePoint);
 
-    printf("\nSelected Course: %s\n", selectedCourse);
-    printf("Grade Letter: %s\n", letterGrade);
-    printf("Credit Hours: %.1f\n", creditHours);
-    printf("Grade Value: %.1f\n", gradeValue);
-    printf("Grade Point: %.1f\n", gradePoint);
-    printf("Total Grade Point: %.1f\n", tgpcalc(gradePoint, gradeValue));
-    */
+ printf("\nSelected Course: %s\n", selectedCourse);
+ printf("Grade Letter: %s\n", letterGrade);
+ printf("Credit Hours: %.1f\n", creditHours);
+ printf("Grade Value: %.1f\n", gradeValue);
+ printf("Grade Point: %.1f\n", gradePoint);
+ printf("Total Grade Point: %.1f\n", tgpcalc(gradePoint, gradeValue));
+ */
 
     return 0;
 }
