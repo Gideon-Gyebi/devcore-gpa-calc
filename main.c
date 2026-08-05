@@ -63,6 +63,8 @@ int main()
     totalCreditHours = tchcalc(gpaStorage, numCourses);
     printf("\nTotal Credit Hours: %.1f\n", totalCreditHours);
 
+    totalGradePoints = tgpcalc(gpaStorage, numCourses);
+    printf("Total Grade Points: %.1f\n", totalGradePoints);
     /*
  // Call the getcrs function to select a course
  selectedCourse = getcrs();
