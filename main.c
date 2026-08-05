@@ -1,9 +1,6 @@
 #include <stdio.h> // Include the standard input/output library
 #include "gpa.h"   // Include the header file for GPA conversion
 
-#include <stdio.h> // Include the standard input/output library
-#include "gpa.h"   // Include the header file for GPA conversion
-
 // Main function to run the GPA conversion program
 int main()
 {
@@ -25,8 +22,6 @@ int main()
 
     // Call the getnumcrs function to get the number of courses
     numCourses = getnumcrs();
-
-    index = numCourses - 1; // Set index to the last course for storage
 
     for (index = 0; index < numCourses; index++)
     {

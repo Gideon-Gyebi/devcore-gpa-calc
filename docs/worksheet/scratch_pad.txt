@@ -80,3 +80,14 @@ int main()
     return 0;
 }
 ```
+
+for (i=0; i < numCourses; i++)
+
+
+2
+
+0 < 2 T
+1 < 2 T
+2 < 2 F
+
+0 1 2
