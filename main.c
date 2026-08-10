@@ -67,5 +67,8 @@ int main()
     gpa = gpacalc(totalGradePoints, totalCreditHours);
     printf("GPA: %.2f\n", gpa);
 
+    printf("\nPress any key to exit...\n");
+    getchar(); // Wait for user input before closing the program
+
     return 0;
 }
