@@ -8,3 +8,7 @@
 3. ./obj/<executable file name> --> [Git bash command to run compile program]
 
 4. \obj\<executable file name> --> [CMD / Powershell command to run compile program]
+
+5. gcc test/test_getch.c src/getch.c -Iinclude -o obj/test_getch --> [command used to compile "test_getch" executable]
+
+6. ./obj/test_getch.exe < test/test_getch_input.txt --> [Git bash command to run compile test program]
