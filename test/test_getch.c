@@ -9,11 +9,11 @@
  * 1       → lower boundary
  * 3       → upper boundary
  * 2       → normal valid value
+ * 2.5     → valid floating-point input
+ * 2abc    → valid number + invalid trailing characters
  * 0       → just below range
  * 4       → just above range
  * abc     → completely invalid input
- * 2abc    → valid number + invalid trailing characters
- * 2.5     → valid floating-point input
  */
 
 
@@ -37,19 +37,13 @@ int main()
     printf("\nTest Case 3: Valid input (2) Normal Value\n");
     test_getch();
 
-    printf("\nTest Case 4: Invalid input (0) Below Range\n");
+    printf("\nTest Case 4: Invalid input (2.5) Valid floating-point input\n");
     test_getch();
 
-    printf("\nTest Case 5: Invalid input (4) Above Range\n");
+    printf("\nTest Case 5: Invalid input (2abc) Valid + Invalid Characters\n");
     test_getch();
 
-    printf("\nTest Case 6: Invalid input (abc) Non-numeric\n");
-    test_getch();
-
-    printf("\nTest Case 7: Invalid input (2abc) Valid + Invalid Characters\n");
-    test_getch();
-
-    printf("\nTest Case 8: Invalid input (2.5) Valid floating-point input\n");
+    printf("\nTest Case 6: Invalid input samples (0, 4, abc) Below Range\n");
     test_getch();
 
     return 0;
