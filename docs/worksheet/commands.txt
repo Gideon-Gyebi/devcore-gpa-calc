@@ -16,3 +16,7 @@
 7. gcc test/test_getcrs.c src/getcrs.c -Iinclude -o obj/test_getcrs --> [command used to compile "test_getcrs" executable]
 
 8. ./obj/test_getcrs.exe < test/test_getcrs_input.txt --> [Git bash command to run compile test program]
+
+9. gcc test/test_getnumcrs.c src/getnumcrs.c -Iinclude -o obj/test_getnumcrs --> [command used to compile "test_getnumcrs" executable]
+
+10. ./obj/test_getnumcrs.exe < test/test_getnumcrs_input.txt --> [Git bash command to run compile test program]
