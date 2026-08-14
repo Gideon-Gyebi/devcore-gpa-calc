@@ -5,7 +5,7 @@
 
 2. gcc test/test_scrconv.c src/scrconv.c -Iinclude -o obj/test_scrconv --> [command used to compile "test_scrconv" executable]
 
-3. ./obj/<executable file name> --> [Git bash command to run compile program]
+3. gcc test/test_lgconv.c src/lgconv.c -Iinclude -o obj/test_lgconv --> [command used to compile "test_lgconv" executable]
 
 4. \obj\<executable file name> --> [CMD / Powershell command to run compile program]
 
