@@ -7,6 +7,16 @@
 
 3. gcc test/test_lgconv.c src/lgconv.c -Iinclude -o obj/test_lgconv --> [command used to compile "test_lgconv" executable]
 
-4. ./obj/<executable file name> --> [Git bash command to run compile program]
+4. \obj\<executable file name> --> [CMD / Powershell command to run compile program]
 
-5. \obj\<executable file name> --> [CMD / Powershell command to run compile program]
+5. gcc test/test_getch.c src/getch.c -Iinclude -o obj/test_getch --> [command used to compile "test_getch" executable]
+
+6. ./obj/test_getch.exe < test/test_getch_input.txt --> [Git bash command to run compile test program]
+
+7. gcc test/test_getcrs.c src/getcrs.c -Iinclude -o obj/test_getcrs --> [command used to compile "test_getcrs" executable]
+
+8. ./obj/test_getcrs.exe < test/test_getcrs_input.txt --> [Git bash command to run compile test program]
+
+9. gcc test/test_getnumcrs.c src/getnumcrs.c -Iinclude -o obj/test_getnumcrs --> [command used to compile "test_getnumcrs" executable]
+
+10. ./obj/test_getnumcrs.exe < test/test_getnumcrs_input.txt --> [Git bash command to run compile test program]

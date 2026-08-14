@@ -11,12 +11,12 @@ char *getcrs(void)
     // Display the list of available courses
     printf("\n AVAILABLE COURSES \n");
     printf("1. Programming Fundamentals\n");
-    printf("2. Mathematics for computer Science\n");
+    printf("2. Mathematics for Computer Science\n");
     printf("3. Communication Skills\n");
-    printf("4. Numeracy skills\n");
-    printf("5. Computer system installation and maintenance\n");
-    printf("6. Office productivity\n");
-    printf("7. Fundamentals of computer science\n");
+    printf("4. Numeracy Skills\n");
+    printf("5. Computer System Installation and Maintenance\n");
+    printf("6. Office Productivity\n");
+    printf("7. Fundamentals of Computer Science\n");
     printf("8. Others [Enter the course name manually]\n"); // Prompt the user to select a course
 
     // Prompt the user until a valid choice is entered
@@ -51,22 +51,22 @@ char *getcrs(void)
         return "Programming Fundamentals";
         break;
     case 2:
-        return "Mathematics for computer Science";
+        return "Mathematics for Computer Science";
         break;
     case 3:
         return "Communication Skills";
         break;
     case 4:
-        return "Numeracy skills";
+        return "Numeracy Skills";
         break;
     case 5:
-        return "Computer system installation and maintenance";
+        return "Computer System Installation and Maintenance";
         break;
     case 6:
-        return "Office productivity";
+        return "Office Productivity";
         break;
     case 7:
-        return "Fundamentals of computer science";
+        return "Fundamentals of Computer Science";
         break;
     case 8:
         printf("Enter the course name: "); // Prompt the user to enter the course name manually
