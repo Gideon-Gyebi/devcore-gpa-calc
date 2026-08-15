@@ -91,3 +91,7 @@ for (i=0; i < numCourses; i++)
 2 < 2 F
 
 0 1 2
+
+
+GPA = total grade point / total credit hours
+gpa //

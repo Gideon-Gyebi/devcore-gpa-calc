@@ -11,6 +11,7 @@
 - **`gparecord`**  --> GPA Records
 - **`savechgp`**  --> Save Credit Hours and Grade Points
 - **`tchcalc`**  --> Total Credit Hour Calculator
+- **`gpacalc`**  --> Grade Point Average Calculator
 
 
 ## <span style="color:green;">Documentation</span>
