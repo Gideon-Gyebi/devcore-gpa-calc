@@ -15,7 +15,7 @@ from running to avoid duplicate definition errors.
 // Structure for storing credit hour and grade point of each course
 typedef struct
 {
-    int creditHour;
+    float creditHour;
     float gradePoint;
 
 } GpaRecord;
