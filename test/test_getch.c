@@ -31,7 +31,7 @@ int main()
 
     printf("\n===================== GETCH Function Tests =====================\n\n");
 
-    printf("Test Case 1: Valid input (1) Lower Boundary.\n");
+    printf("Test Case 1: Valid Input (1) Lower Boundary.\n");
     creditHours = test_getch();
     if (creditHours == 1.0f)
     {
@@ -45,7 +45,7 @@ int main()
 
     printf("----------------------------------------------------------------\n");
 
-    printf("\nTest Case 2: Valid input (3) Upper Boundary.\n");
+    printf("\nTest Case 2: Valid Input (3) Upper Boundary.\n");
     creditHours = test_getch();
     if (creditHours == 3.0f)
     {
@@ -59,7 +59,7 @@ int main()
 
     printf("----------------------------------------------------------------\n");
 
-    printf("\nTest Case 3: Valid input (2) Normal Value.\n");
+    printf("\nTest Case 3: Valid Input (2) Normal Value.\n");
     creditHours = test_getch();
     if (creditHours == 2.0f)
     {
@@ -73,7 +73,7 @@ int main()
 
     printf("----------------------------------------------------------------\n");
 
-    printf("\nTest Case 4: Invalid input (2.5) Valid floating-point input.\n");
+    printf("\nTest Case 4: Invalid Input (2.5) Valid Floating-Point Input.\n");
     creditHours = test_getch();
     if (creditHours == 2.5f)
     {
@@ -87,7 +87,7 @@ int main()
     
     printf("----------------------------------------------------------------\n");
     
-    printf("\nTest Case 5: Invalid input (2abc) Valid + Invalid Characters.\n");
+    printf("\nTest Case 5: Invalid Input (2abc) Valid + Invalid Characters.\n");
     creditHours = test_getch();
     if (creditHours == 2.0f)
     {
@@ -101,7 +101,7 @@ int main()
 
     printf("----------------------------------------------------------------\n");
 
-    printf("\nTest Case 6: Invalid input samples (0, 4, abc) Below Range,\nAbove Range and Completely Invalid.\n");
+    printf("\nTest Case 6: Invalid Input Samples (0, 4, abc) Below Range,\nAbove Range and Completely Invalid.\n");
     test_getch();
     printf("\n[PASS] = Two range errors and one invalid input error.\n");
     printf("[FAIL] = If there are less than three error messages.\n");
