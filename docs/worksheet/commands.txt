@@ -32,5 +32,9 @@
 
 12. gcc test/test_tgpcalc.c src/tgpcalc.c -Iinclude -o obj/test_tgpcalc --> [command used to compile "test_tgpcalc" executable]
 
-13. ./obj/test_tgpcalc.exe < test/test_tgpcalc_input.txt --> [Git bash command to run compile test program]
+13. 
 
+
+14. gcc test/test_tchcalc.c src/tchcalc.c -Iinclude -o obj/test_tchcalc --> [command used to compile "test_tchcalc" executable]
+
+15. 
