@@ -95,3 +95,8 @@ for (i=0; i < numCourses; i++)
 
 GPA = total grade point / total credit hours
 gpa //
+
+savechgp(structs, 0, 3, 15)
+
+
+gpacalc(5, 3) return 15

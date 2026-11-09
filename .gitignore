@@ -1,3 +1,6 @@
+# Git ignore file
+commands.txt
+
 # Prerequisites
 *.d
 
