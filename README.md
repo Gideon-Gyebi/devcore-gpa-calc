@@ -92,6 +92,20 @@ DEVCORE-GPA-CALC/
 └── test_gpconv.exe
 ```
 
+
+## Project Documentation and Team Direction
+
+The following documents describe the repository assessment, agreed MVP scope, architecture and development workflow. The **Project Governance and Development Plan** is the team's primary reference for current scope and working agreements.
+
+| Document | Purpose |
+|---|---|
+| [Project Governance and Development Plan](docs/project/02_project_governance_and_development_plan.md) | Governing scope, roadmap, architecture, priorities and working agreement |
+| [Initial Repository Overview](docs/project/01_initial_repository_overview.md) | Baseline technical assessment of the inspected codebase |
+| [Architecture Note](docs/project/03_architecture_note.md) | GTK4 and C backend separation and integration responsibilities |
+| [MVP Development Checklist](docs/project/04_mvp_development_checklist.md) | Practical implementation and verification checklist |
+
+> The initial overview is a historical assessment snapshot. Check the current source before treating any finding as the present state of the code. The gideon branch is the working reference used for these documents; the repository default branch remains main.
+
 ---
 
 # Requirements
