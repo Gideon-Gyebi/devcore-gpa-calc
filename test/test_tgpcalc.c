@@ -62,6 +62,7 @@ int main()
 
     printf("----------------------------------------------------\n\n");
 
+    printf("Test Case 3: Valid Input (0 courses) No Courses.\n");
     // An array named gpaStorag3 with space for 1 GpaRecord
     GpaRecord gpaStorage3[1] =
         {
