@@ -8,7 +8,7 @@
 
 - **Input** — covered in section 1 of this document.
 - **Output** — covered in section 2 of this document.
-- **Validation** — to be completed next session in section 3.
+- **Validation** — covered in section 3; name-capitalization formatting remains a UI choice.
 - **Contract** — covered in section 4; proposed status and error behavior is ready for lead review.
 - **Data Flow** — covered in section 5.
 
@@ -27,7 +27,7 @@ On entry, the integration function reads `courseName`, `score` and `creditHour`.
 | `score` | `float` | From 0.0 through 100.0, with at most one decimal place; use the established ATU grade boundaries. |
 | `creditHour` | `float` | Only 1.0, 1.5, 2.0, 2.5 or 3.0 is allowed. |
 
-These input rules are settled. Section 3 records the validation behavior still to be specified.
+These input rules are settled. Section 3 specifies how the API validates them.
 
 ## 2. Output contract
 
@@ -56,16 +56,21 @@ typedef struct
 
 The complete API declaration, including its status and error details, appears in section 4. The UI uses the course fields and summary after a successful call.
 
-## 3. Validation — next session
+## 3. Validation
 
-**Owner:** Gideon. The field rules are listed in section 1; this section will define how the API enforces them before calculation.
+**Owner:** Gideon. The integration API enforces these rules before it calls calculation functions. GTK may also check inputs to give immediate feedback, but API validation remains required.
 
-Work to complete:
+| Check | API rule | Result on failure |
+|---|---|---|
+| Required arguments | `courses`, `summary` and `errorCourseIndex` must not be null. | `GPA_STATUS_INVALID_ARGUMENT`; index `-1` when available. |
+| Course count | Must be 1 through `MAX_COURSES` (15). | `GPA_STATUS_INVALID_COURSE_COUNT`; index `-1`. |
+| Course name | Must contain a null terminator within its 100-character array, have at least one non-whitespace character, and fit within the buffer (up to 99 text bytes plus terminator). | `GPA_STATUS_INVALID_COURSE_NAME`; set the course's zero-based index. |
+| Score | Must be finite, from 0.0 through 100.0, and represent no more than one decimal place. When checking tenths, account for normal floating-point representation tolerance. | `GPA_STATUS_INVALID_SCORE`; set the course's zero-based index. |
+| Credit hours | Must be finite and equal to 1.0, 1.5, 2.0, 2.5 or 3.0. | `GPA_STATUS_INVALID_CREDIT_HOUR`; set the course's zero-based index. |
 
-- Specify checks for blank/whitespace names, name capacity and termination, score range and one-decimal precision, and the five allowed credit-hour values.
-- Decide whether and how the UI normalizes course-name capitalization, and ensure the API still validates the received string.
-- Define the validation order and when the backend calculation functions may be called.
-- Specify how invalid input affects existing calculated fields and displayed results.
+Check the general arguments and count first, then inspect courses in array order. For each course, check name, score and credit hours in that order. Stop at the first failure, return its status, and set `errorCourseIndex` to that course's zero-based position. Only begin calculations after all course inputs pass validation.
+
+The API rejects blank names but does not change capitalization. A GTK formatter may apply a consistent style; agree that presentation rule with the UI workstream separately. On validation failure, the UI preserves entered inputs and treats calculated fields and the summary as invalid; it displays feedback using the returned status and course index.
 
 ## 4. API contract
 
@@ -80,8 +85,8 @@ Work to complete:
 
 typedef enum
 {
-    GPA_STATUS_SUCCESS,
-    GPA_STATUS_INVALID_ARGUMENT,
+    GPA_STATUS_SUCCESS,             /* Calculation completed. */
+    GPA_STATUS_INVALID_ARGUMENT,    /* A required pointer is null. */
     GPA_STATUS_INVALID_COURSE_COUNT,
     GPA_STATUS_INVALID_COURSE_NAME,
     GPA_STATUS_INVALID_SCORE,
@@ -89,72 +94,121 @@ typedef enum
     GPA_STATUS_CALCULATION_ERROR
 } GpaStatus;
 
-/* errorCourseIndex is zero-based; use -1 for errors not tied to one course. */
+/* One array record per course; the API fills calculated fields in place. */
 GpaStatus calculate_semester(
     CourseResult courses[],
     int courseCount,
     SemesterSummary *summary,
-    int *errorCourseIndex
+    int *errorCourseIndex /* zero-based failing course; -1 for general errors */
 );
 
 #endif
 ```
 
-`typedef enum { ... } GpaStatus` defines named return codes for the API. `calculate_semester()` returns `GPA_STATUS_SUCCESS` when the calculation succeeds, or another status to identify why it could not proceed. The UI checks that value to decide whether to display results or show an error message. `GpaStatus` describes the API call; it is separate from `CourseResult.letterGrade`, which holds the course's letter grade as text.
+`GpaStatus` is a set of named return codes. The function returns one status; it is separate from `CourseResult.letterGrade`, which holds the course's letter grade as text.
 
-| Contract item | Behavior |
+The caller allocates the storage. `courses` is an array with one `CourseResult` per entered row; `calculate_semester()` receives the whole array in one call and processes its first `courseCount` elements one by one. It writes each course's calculated fields back into that same element. The API does not allocate, retain or free the array. The caller also supplies one `SemesterSummary` and one `errorCourseIndex` integer; the API fills them. The index identifies the first failing course, not a list of errors.
+
+| Contract item | Meaning and output use |
 |---|---|
-| Valid call | `courses`, `summary` and `errorCourseIndex` are non-null; `courseCount` is 1 through `MAX_COURSES`. |
-| Validation | The integration layer enforces the rules in section 1; validation details are listed for completion in section 3. |
-| Success | Return `GPA_STATUS_SUCCESS`; all calculated fields and `summary` are valid for the UI to display; set `*errorCourseIndex` to `-1`. |
-| Input error | Return the matching status; for a course-specific error, set `*errorCourseIndex` to its zero-based array index. For a general error, set it to `-1`. |
-| Failure outputs | The UI must not display calculated fields or the summary unless the status is success. |
-| Presentation | The UI turns the status into user-facing feedback; the API and calculation functions do not print UI messages. |
+| Required arguments | `courses`, `summary` and `errorCourseIndex` must point to caller-owned storage; `courseCount` must be 1 through `MAX_COURSES`. |
+| `GPA_STATUS_SUCCESS` | Calculation completed; course results and `summary` are ready to display; index is `-1`. |
+| `GPA_STATUS_INVALID_ARGUMENT` | A required pointer was null; index is `-1` when its output pointer is available. |
+| `GPA_STATUS_INVALID_COURSE_COUNT` | Count is outside 1–`MAX_COURSES`; index is `-1`. |
+| `GPA_STATUS_INVALID_COURSE_NAME`, `GPA_STATUS_INVALID_SCORE`, `GPA_STATUS_INVALID_CREDIT_HOUR` | The first invalid course field; index is that course's zero-based array position. |
+| `GPA_STATUS_CALCULATION_ERROR` | A backend calculation failed; index is `-1` unless the failure is tied to a specific course. |
+
+On any non-success status, the UI must not display the calculated fields or summary as current results. The UI translates the status into user-facing feedback; the API and calculation functions do not print UI messages.
 
 ## 5. Data flow
 
 ```text
-ui/gui.c
-  Reads GTK fields into CourseResult[].courseName, .score and .creditHour
-  Includes semester_api.h; calls calculate_semester(...)
-                 │
-                 ▼
-src/semester_api.c
-  Validates courseCount and every course input
-  Calls scrconv(float score) → lgconv(letterGrade) → gpcalc(gradeValue, creditHour)
-  Fills CourseResult[].letterGrade, .gradeValue and .gradePoint
-  Calls tchcalc/tgpcalc → gpacalc; fills SemesterSummary
-                 │
-          status + results
-                 ▼
-ui/gui.c displays the results on success, or shows feedback for the returned status
+GTK UI — ui/gui.c
+  One course row fills one element: courses[0], courses[1], ... courses[n-1]
+  The UI owns the array, one SemesterSummary, courseCount and errorCourseIndex
+
+                         │
+                         │ One call sends the entire array and courseCount
+                         ▼
+
+Integration API — src/semester_api.c
+  Checks the arguments and validates every course before calculation
+
+                         │
+                         │ After validation, processes each course in array order
+                         ▼
+
+Existing calculation backend — src/*.c
+  For each course: scrconv(score) → lgconv(letterGrade)
+                   → gpcalc(gradeValue, creditHour)
+  Totals: tchcalc(...) + tgpcalc(...) → gpacalc(...)
+
+                         │
+                         │ Writes outputs into the caller's records
+                         ▼
+
+Integration API — src/semester_api.c
+  Fills each courses[i].letterGrade, .gradeValue and .gradePoint
+  Fills the one SemesterSummary and returns GpaStatus
+  Sets errorCourseIndex to the first invalid course, or -1 for a general error
+
+                         │
+                         │ One return: status + updated array + summary + index
+                         ▼
+
+GTK UI — ui/gui.c
+  On success, reads courses[0..courseCount-1] for result rows and summary once
+  On error, uses GpaStatus and errorCourseIndex to show feedback
 ```
 
 ```text
 include/gpa.h
-  Defines MAX_COURSES, CourseResult and SemesterSummary
-       ↑ included by                         ↑ included by
-include/semester_api.h                    src/semester_api.c
-  Defines GpaStatus                         Includes both headers; calls backend
-  Declares calculate_semester(...)                    ↑
-       ↑ included by                                   │
-ui/gui.c  ───────── calls API ─────────────── existing src/ calculation functions
+  Shared definitions: MAX_COURSES, CourseResult, SemesterSummary
+
+include/semester_api.h
+  Includes gpa.h; defines GpaStatus and declares calculate_semester(...)
+
+src/semester_api.c
+  Includes semester_api.h; coordinates the existing calculation functions
+
+ui/gui.c
+  Includes semester_api.h; calls the API and displays its returned results
 ```
 
-The GTK layer must not call terminal input functions (`getcrs()`, `getscr()`, `getch()`). The existing `include/gpa.h` and backend sources still contain legacy `GpaRecord` and integer-score declarations; backend adaptation replaces them with the agreed model and float-score path. `include/semester_api.h` and `src/semester_api.c` are new integration files. The UI snippet’s `collect_course_inputs()` is only illustrative and is not an existing function.
+The GTK layer must not call terminal input functions (`getcrs()`, `getscr()`, `getch()`). The existing `include/gpa.h` and backend sources still contain legacy `GpaRecord` and integer-score declarations; backend adaptation replaces them with the agreed model and float-score path. `include/semester_api.h` and `src/semester_api.c` are new integration files.
 
 ```c
-/* ui/gui.c — call-site sketch */
+/* Illustrative caller-owned state; the actual GTK application state is not implemented yet. */
 #include "semester_api.h"
 
-CourseResult courses[MAX_COURSES];
-SemesterSummary summary;
-int courseCount = collect_course_inputs(courses);
-int errorCourseIndex;
+typedef struct
+{
+    CourseResult courses[MAX_COURSES]; /* One record for each course row. */
+    SemesterSummary summary;           /* One summary for the whole semester. */
+    int courseCount;
+} AppState;
 
-GpaStatus status = calculate_semester(
-    courses, courseCount, &summary, &errorCourseIndex
-);
+static void calculate_button_clicked(AppState *app)
+{
+    int errorCourseIndex = -1; /* One index output, not an array of indexes. */
+
+    /* One call sends all entered rows; the API processes them row by row. */
+    GpaStatus status = calculate_semester(
+        app->courses,
+        app->courseCount,
+        &app->summary,
+        &errorCourseIndex
+    );
+
+    if (status == GPA_STATUS_SUCCESS)
+    {
+        /* Read app->courses[0..courseCount-1] for result rows and app->summary once. */
+    }
+    else
+    {
+        /* Use status and errorCourseIndex to show feedback. */
+    }
+}
 ```
 
 ## **MUST IMPLEMENT — changes required for the new API and data flow**
