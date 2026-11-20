@@ -6,10 +6,10 @@
 
 ## Progress
 
-- **Input** — covered in section 1 of this document.
-- **Output** — covered in section 2 of this document.
+- **Input Contract** — covered in section 1 of this document.
+- **Output Contract** — covered in section 2 of this document.
 - **Validation** — covered in section 3; name-capitalization formatting remains a UI choice.
-- **Contract** — covered in section 4; proposed status and error behavior is ready for lead review.
+- **API Contract** — covered in section 4; proposed status and error behavior is ready for lead review.
 - **Data Flow** — covered in section 5.
 
 This note turns the recorded project decisions into an API design for implementation.
