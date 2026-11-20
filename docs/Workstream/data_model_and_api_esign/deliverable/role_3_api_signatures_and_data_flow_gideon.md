@@ -58,7 +58,7 @@ The complete API declaration, including its status and error details, appears in
 
 ## 3. Validation
 
-**Owner:** Gideon. The integration API enforces these rules before it calls calculation functions. GTK may also check inputs to give immediate feedback, but API validation remains required.
+The integration API enforces these rules before it calls calculation functions. GTK may also check inputs to give immediate feedback, but API validation remains required.
 
 | Check | API rule | Result on failure |
 |---|---|---|
