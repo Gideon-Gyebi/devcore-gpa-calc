@@ -19,3 +19,4 @@ Use the same structure for later workstreams. Keep team-facing handoffs in `Deli
 
 - [Data Model and API Design](Data%20Model%20and%20API%20Design/Guide/01_data_model_and_api_design_lead_guide.md)
 - [Role 3: API Signatures and Data Flow — Gideon](Data%20Model%20and%20API%20Design/Deliverable/role-3-api-signatures-and-data-flow-gideon.md)
+- [Role 2: Data Structures and Field Types — Jormo](data_model_and_api_esign/deliverable/role_2_data_structures_and_field_types_jormo.md)
