@@ -9,7 +9,7 @@ int main()
     GpaRecord gpaStorage[MAX_COURSES];
 
     // Declare variables for course information
-    int score;
+    float score;
     char *letterGrade;
     float gradeValue;
     float creditHours;
