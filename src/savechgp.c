@@ -1,8 +1,7 @@
 #include "GPA.h"
 
-
 // Stores one course's credit hour and grade point into the record array
-void savechgp(GpaRecord gpaStorage[], int index, float creditHour, float gradePoint)
+void savechgp(CourseResult gpaStorage[], int index, float creditHour, float gradePoint)
 {
     // Save credit hour at the specified array position
     gpaStorage[index].creditHour = creditHour;

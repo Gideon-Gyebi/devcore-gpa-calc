@@ -18,9 +18,9 @@ typedef struct
     float creditHour;
     float gradePoint;
 
-} GpaRecord;
+} CourseResult;
 
-void savechgp(GpaRecord gpaStorage[], int index, float creditHour, float gradePoint); // Function prototype for saving credit hour and grade point
+void savechgp(CourseResult gpaStorage[], int index, float creditHour, float gradePoint); // Function prototype for saving credit hour and grade point
 
 int getnumcrs(void);                                           // Function prototype for 'getnumcrs'. Returns an integer value representing the number of courses.
 char *getcrs(void);                                            // Function prototype for 'getcrs'. Returns a pointer to a character string representing the course name.
@@ -29,8 +29,8 @@ int getscr(void);                                              // Function proto
 char *scrconv(int score);                                      // Function prototype for 'scrconv'. Returns a pointer to a character string.
 float gpcalc(float gradeValue, float creditHours);             // Function prototype for 'gpcalc'. Returns a float grade value.
 float lgconv(char *letterGrade);                               // Function prototype for 'lgconv'. Returns a float value representing the letter grade.
-float tgpcalc(GpaRecord gpaStorage[], int numCourses);         // Function prototype for 'tgpcalc'. Returns a float value representing the total grade points of all stored courses.
-float tchcalc(GpaRecord gpaStorage[], int numCourses);         // Function prototype for 'tchcalc'. Returns a float value representing the total credit hours of all stored courses.
+float tgpcalc(CourseResult gpaStorage[], int numCourses);      // Function prototype for 'tgpcalc'. Returns a float value representing the total grade points of all stored courses.
+float tchcalc(CourseResult gpaStorage[], int numCourses);      // Function prototype for 'tchcalc'. Returns a float value representing the total credit hours of all stored courses.
 float gpacalc(float totalGradePoints, float totalCreditHours); // Function prototype for 'gpacalc'. Returns a float value representing the calculated GPA.
 
 /*

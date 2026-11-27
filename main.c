@@ -6,7 +6,7 @@ int main()
 {
 
     // Create storage for GPA records
-    GpaRecord gpaStorage[MAX_COURSES];
+    CourseResult gpaStorage[MAX_COURSES];
 
     // Declare variables for course information
     int score;

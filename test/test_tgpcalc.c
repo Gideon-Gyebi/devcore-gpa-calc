@@ -10,7 +10,7 @@
 *0 courses → valid input (should return 0.0)
 */
 
-float test_tgpcalc(GpaRecord gpaStorage[], int numCourses)
+float test_tgpcalc(CourseResult gpaStorage[], int numCourses)
 {
     float totalGradePoints = tgpcalc(gpaStorage, numCourses);
 
@@ -25,7 +25,7 @@ int main()
     printf("\n===================TGPCALC Function Tests===================\n\n");
 
     printf("Test Case 1: Valid Input (3 courses with grade points 12.0, 4.5, 6.0) Normal Case.\n");
-    GpaRecord gpaStorage[3] =
+    CourseResult gpaStorage[3] =
         {
             {.gradePoint = 12.0},
             {.gradePoint = 4.5},
@@ -45,7 +45,7 @@ int main()
     printf("--------------------------------------------------\n\n");
 
     printf("Test Case 2: Valid Input (1 course with grade point 12.0) Single Course.\n");
-    GpaRecord gpaStorage2[1] =
+    CourseResult gpaStorage2[1] =
         {
             {.gradePoint = 12.0f}};
     numCourses = 1;
@@ -64,7 +64,7 @@ int main()
 
     printf("Test Case 3: Valid Input (0 courses) No Courses.\n");
     // An array named gpaStorag3 with space for 1 GpaRecord
-    GpaRecord gpaStorage3[1] =
+    CourseResult gpaStorage3[1] =
         {
             // Set the gradePoint of the single record to 0.0f
             {.gradePoint = 0.0f}};

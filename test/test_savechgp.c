@@ -12,7 +12,7 @@
 
 int main()
 {
-    GpaRecord gpaStorage[3];
+    CourseResult gpaStorage[3];
     int index;
     float creditHour;
     float gradePoint;
@@ -36,6 +36,5 @@ int main()
 
     printf("--------------------------------------------------\n\n");
 
-     printf("Test Case 2: Valid Input (Three courses) Normal Case.\n");
-     
+    printf("Test Case 2: Valid Input (Three courses) Normal Case.\n");
 }
