@@ -2,16 +2,16 @@
 #include "gpa.h" // Include the header file for GPA calculation
 
 // Function to read the number of credit hours from the user
-int getscr(void)
+float getscr(void)
 {
-    int score;
+    float score;
     char clear; // Variable to clear the input buffer
 
     do
     {
-        printf("Enter the score (e.g., 85 or 90): ");
+        printf("Enter the score (e.g., 85.5 or 90.0): ");
 
-        if (scanf("%d", &score) != 1) // Check if the input is valid
+        if (scanf("%f", &score) != 1) // Check if the input is valid
         {
             fprintf(stderr, "GETSCR_Error: Invalid input for score.\n"); // Print an error message to standard error
 

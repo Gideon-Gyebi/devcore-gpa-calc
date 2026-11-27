@@ -3,7 +3,7 @@
 #include "gpa.h" // Include the header file for GPA conversion
 
 // Function to test the scrconv function with a given score and expected result
-void testCase(int score, char *expected)
+void testCase(float score, char *expected)
 {
     // Call the scrconv function to convert the score to a letter grade
     char *result = scrconv(score);
@@ -11,11 +11,11 @@ void testCase(int score, char *expected)
     // Compare the result with the expected value
     if (strcmp(result, expected) == 0) // string compare = strcmp
     {
-        printf("[PASS] Score: %3d -> %s\n", score, result);
+        printf("[PASS] Score: %.1f -> %s\n", score, result);
     }
     else
     {
-        printf("[FAIL] Score: %3d -> Expected %s but got %s\n", score, expected, result);
+        printf("[FAIL] Score: %.1f -> Expected %s but got %s\n", score, expected, result);
     }
 }
 
@@ -81,6 +81,15 @@ int main()
     {
         testCase(i, "F");
     }
+
+    printf("\n Decimal and boundary tests \n");
+    testCase(85.0f, "A+");
+    testCase(84.9f, "A");
+    testCase(79.9f, "B+");
+    testCase(74.5f, "B");
+    testCase(49.9f, "F");
+    testCase(100.5f, "INVALID");
+    testCase(-0.5f, "INVALID");
 
     return 0;
 }
