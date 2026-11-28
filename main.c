@@ -28,6 +28,11 @@ int main()
     {
         // Call the getcrs function to select a course
         selectedCourse = getcrs();
+        snprintf(
+            gpaStorage[index].courseName,
+            sizeof gpaStorage[index].courseName,
+            "%s",
+            selectedCourse);
 
         // Call the getch function to read the credit hours
         creditHours = getch();
@@ -48,7 +53,7 @@ int main()
         savechgp(gpaStorage, index, creditHours, gradePoint);
 
         // Print the results to the console
-        printf("\nSelected Course: %s\n", selectedCourse);
+        printf("\nSelected Course: %s\n", gpaStorage[index].courseName);
         printf("Grade Letter: %s\n", letterGrade);
         printf("Credit Hours: %.1f\n", creditHours);
         printf("Grade Value: %.1f\n", gradeValue);
